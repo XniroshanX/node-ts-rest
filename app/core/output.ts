@@ -10,12 +10,12 @@ class Output {
     }
 
     private init() {
-        this.viewDirectory = path.join('app', 'views');
+        this.viewDirectory = '/app/views';
     }
 
     render(file: string, response: Response, data: any) {
         data.root = this.viewDirectory;
-        return response.sendFile(file, data);
+        return response.render(file, data);
     }
 
     json(response: Response, data: any) {

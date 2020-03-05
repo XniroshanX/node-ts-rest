@@ -4,6 +4,8 @@ import WebRoutes from './routes/web';
 
 const app: Application = express();
 
+app.set('view engine', 'pug');
+
 app.use('/api', ApiRoutes);
 app.use('/', WebRoutes);
 

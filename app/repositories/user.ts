@@ -3,7 +3,7 @@ import UserModel from '../models/user';
 class User {
 
     getAllUser() {
-        UserModel.all();
+        return UserModel.all();
     }
 
 }

@@ -3,9 +3,10 @@ import User from '../../controllers/User';
 
 const router = Router();
 
+const user = new User();
+
 router.get('/', (req: Request, res: Response) => {
-    let user = new User();
-    user.products(req, res);
+    user.getUsers(req, res);
 });
 
 export default router;
