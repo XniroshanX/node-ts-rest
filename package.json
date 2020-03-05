@@ -1,0 +1,32 @@
+{
+  "name": "node-ts-rest",
+  "version": "1.0.0",
+  "description": "Rest API build by Node.JS, TypeScript and Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js",
+    "dev": "nodemon app/app.ts",
+    "build": "tsc -p ."
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "node",
+    "express",
+    "typescript"
+  ],
+  "author": "Niroshan Jayathilaka",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "mustache": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.1",
+    "@types/node": "12.7.8",
+    "nodemon": "1.19.2",
+    "ts-node": "8.4.1",
+    "typescript": "3.6.3"
+  }
+}
