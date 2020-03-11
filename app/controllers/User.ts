@@ -1,12 +1,14 @@
 import Controller from '../core/controller';
 import { Request, Response } from 'express';
-import UserService from '../services/user';
-
+import UserModel from '../models/user';
 class User extends Controller {
 
-    getUsers(reqest: Request, response: Response) {
-        let users: any = UserService.allUsers();
-        this.json(users, response);
+    getLoggedUser(reqest: Request, response: Response) {
+        let user: any = UserModel.find(1);
+        user.username = 'niroshanJ';
+        user.country = 'Sri Lanka';
+        user.save();
+        this.json(user, response);
     }
 
     index(reqest: Request, response: Response) {
