@@ -6,8 +6,10 @@ const router = Router();
 
 router.use('/user', UserRouter);
 
-router.get('/', (req: Request, res: Response) => {
+const user = new User();
 
+router.get('/', (request: Request, response: Response) => {
+    user.index(request, response);
 });
 
 export default router;

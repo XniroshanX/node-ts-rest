@@ -9,8 +9,12 @@ class User extends Controller {
         this.json(users, response);
     }
 
-    userList(reqest: Request, response: Response) {
-        this.render('index', response, { title: 'Hey', message: 'Hello there! This was created by PUG...' });
+    index(reqest: Request, response: Response) {
+        this.render('index', response, { title: 'Welcome', message: 'Hello there!' });
+    }
+
+    profile(reqest: Request, response: Response) {
+        this.render('index', response, { title: 'Welcome', message: 'You are looking at my profile!' });
     }
 
 }

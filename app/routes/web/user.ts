@@ -5,8 +5,8 @@ const router = Router();
 
 const user = new User();
 
-router.get('/list',(request: Request, response: Response) => {
-    user.userList(request, response);
+router.get('/profile',(request: Request, response: Response) => {
+    user.profile(request, response);
 });
 
 export default router;
