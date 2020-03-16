@@ -5,6 +5,7 @@ import UserModel, { UserModelInterface } from '../models/user';
 class User extends Controller {
 
     create(reqest: Request, response: Response) {
+        // create user by using mongoose model
         UserModel.create({
             username: reqest.body.username,
             email: reqest.body.email

@@ -2,8 +2,9 @@ import { Request, Response, Router } from 'express';
 import UserRouter from './user';
 import Output from '../../core/output';
 
-const router = Router();
+const router: Router = Router();
 
+// use user routes
 router.use('/user', UserRouter);
 
 router.get('/', (request: Request, response: Response) => {

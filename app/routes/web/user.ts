@@ -1,11 +1,11 @@
 import { Request, Response, Router } from 'express';
 import User from '../../controllers/User';
 
-const router = Router();
+const router: Router = Router();
 
-const user = new User();
+const user: User = new User();
 
-router.get('/profile',(request: Request, response: Response) => {
+router.get('/profile', (request: Request, response: Response) => {
     user.profile(request, response);
 });
 
