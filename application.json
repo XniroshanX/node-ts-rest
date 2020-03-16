@@ -2,25 +2,40 @@
     "environment": "testing",
     "configurations": {
         "development": {
-            "port": 2998,
-            "hostname": "development_hostname",
-            "database": "development_database",
-            "username": "development_username",
-            "password": "development_password"
+            "sql": {
+                "port": 3306,
+                "hostname": "http://localhost",
+                "database": "tsnode",
+                "username": "root",
+                "password": ""
+            },
+            "mongoose": {
+                "connection": "mongodb://localhost:27017/test"
+            }
         },
         "testing": {
-            "port": 2999,
-            "hostname": "testing_hostname",
-            "database": "testing_database",
-            "username": "testing_username",
-            "password": "testing_password"
+            "sql": {
+                "port": 3306,
+                "hostname": "http://localhost",
+                "database": "tsnode",
+                "username": "root",
+                "password": ""
+            },
+            "mongoose": {
+                "connection": "mongodb://localhost:27017/test"
+            }
         },
         "production": {
-            "port": 3000,
-            "hostname": "production_hostname",
-            "database": "production_database",
-            "username": "production_username",
-            "password": "production_password"
+            "sql": {
+                "port": 3306,
+                "hostname": "http://localhost",
+                "database": "tsnode",
+                "username": "root",
+                "password": ""
+            },
+            "mongoose": {
+                "connection": "mongodb://localhost:27017/test"
+            }
         }
     }
 }

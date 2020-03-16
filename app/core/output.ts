@@ -18,8 +18,8 @@ class Output {
         return response.render(file, data);
     }
 
-    json(response: Response, data: any) {
-        response.contentType('json').send(data);
+    json(response: Response, data: any, code: number = 200) {
+        response.status(code).contentType('json').send(data);
     }
 }
 let OutputService = new Output();

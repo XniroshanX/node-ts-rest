@@ -5,8 +5,8 @@ const router = Router();
 
 const user = new User();
 
-router.get('/', (req: Request, res: Response) => {
-    user.getLoggedUser(req, res);
+router.post('/', (req: Request, res: Response) => {
+    user.create(req, res);
 });
 
 export default router;

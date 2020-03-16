@@ -1,12 +1,14 @@
-import Model from '../core/model';
+import mongoose, { Schema, Document } from 'mongoose';
 
-class User extends Model {
-
-    find(id:number) {
-        console.log('find by ' + id);
-        return this
-    }
+export interface UserModelInterface extends Document {
+    username: string;
+    email: string;
 }
 
-let UserModel = new User();
-export default UserModel;
+const UserSchema: Schema = new Schema({
+    username: { type: String, required: true, unique: true },
+    email: { type: String, required: true }
+});
+
+
+export default mongoose.model<UserModelInterface>('User', UserSchema);

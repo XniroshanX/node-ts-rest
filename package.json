@@ -19,7 +19,9 @@
   "author": "Niroshan Jayathilaka",
   "license": "MIT",
   "dependencies": {
+    "@types/mongoose": "^5.7.6",
     "express": "4.17.1",
+    "mongoose": "^5.9.4",
     "pug": "^2.0.4",
     "sequelize": "^5.21.5"
   },

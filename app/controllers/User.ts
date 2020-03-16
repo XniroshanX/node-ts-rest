@@ -1,14 +1,18 @@
 import Controller from '../core/controller';
 import { Request, Response } from 'express';
-import UserModel from '../models/user';
+import UserModel, { UserModelInterface } from '../models/user';
+
 class User extends Controller {
 
-    getLoggedUser(reqest: Request, response: Response) {
-        let user: any = UserModel.find(1);
-        user.username = 'niroshanJ';
-        user.country = 'Sri Lanka';
-        user.save();
-        this.json(user, response);
+    create(reqest: Request, response: Response) {
+        UserModel.create({
+            username: reqest.body.username,
+            email: reqest.body.email
+        }).then((data: UserModelInterface) => {
+            this.success(response);
+        }).catch((error: Error) => {
+            this.fail(error.message, response, 500);
+        });
     }
 
     index(reqest: Request, response: Response) {
@@ -16,7 +20,7 @@ class User extends Controller {
     }
 
     profile(reqest: Request, response: Response) {
-        this.render('index', response, { title: 'Welcome', message: 'You are looking at my profile!' });
+        this.render('index', response, { title: 'Welcome', message: 'Welcome to my profile!' });
     }
 
 }
