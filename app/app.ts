@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import bodyParser from 'body-parser';
 import ApiRoutes from './routes/api';
 import WebRoutes from './routes/web';
-import mongooseConnection from '../app/core/connections/mongoose';
+import mongooseConnection from './core/connections/mongoose';
 import { ApplicationConfiguration } from './config/application';
 
 // create express app
